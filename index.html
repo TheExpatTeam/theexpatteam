@@ -99,6 +99,38 @@
       margin-bottom:0;
       line-height:1.5;
     }
+    .team-members {
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+    }
+    .team-member {
+      flex:1 1 220px;
+      max-width:250px;
+      background:#fff;
+      border-radius:12px;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+    .team-member img {
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:15px;
+    }
+    .team-member h3 {
+      margin:10px 0 5px;
+      font-family:'Lexend', sans-serif;
+      color: var(--primary);
+      font-size:1.2rem;
+    }
+    .team-member p {
+      margin:0;
+      font-size:0.95rem;
+    }
     .cta {
       background: var(--secondary);
       color: var(--primary-dark);
@@ -150,6 +182,9 @@
       .feature {
         flex:1 1 100%;
       }
+      .team-member {
+        flex:1 1 100%;
+      }
     }
   </style>
 </head>
@@ -162,6 +197,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#team">Team</a>
     <a href="#resources">Resources</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -188,6 +224,31 @@
         <div class="feature">
           <h3>Family & Lifestyle</h3>
           <p>Advice on home contents, family finances and loans—so you can protect what matters most while enjoying life here.</p>
+        </div>
+      </div>
+    </section>
+    <section id="team">
+      <h2>Meet the Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team member 1">
+          <h3>Alex</h3>
+          <p>Insurance Specialist</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team member 2">
+          <h3>Jordan</h3>
+          <p>Banking Advisor</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team member 3">
+          <h3>Taylor</h3>
+          <p>Investment Coach</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team member 4">
+          <h3>Riley</h3>
+          <p>Client Support</p>
         </div>
       </div>
     </section>
