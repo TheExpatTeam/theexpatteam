@@ -1,85 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Expat Team</title>
-    <meta name="description" content="The Expat Team helps expats and international students in Germany navigate finance, insurance and everyday life.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; color: #333; background-color: #f7f7f7; }
-        header { background: linear-gradient(to right, #005f99, #00aaff); color: #fff; padding: 60px 20px; text-align: center; }
-        header h1 { font-size: 2.5em; margin-bottom: 0.2em; }
-        header p { font-size: 1.2em; margin-top: 0; }
-        nav { background: #fff; padding: 10px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; display: flex; justify-content: center; }
-        nav a { margin: 0 15px; color: #005f99; text-decoration: none; font-weight: 600; }
-        nav a:hover { text-decoration: underline; }
-        section { padding: 60px 20px; margin: 0 auto; max-width: 1000px; }
-        .features { display: flex; flex-wrap: wrap; gap: 20px; }
-        .feature { flex: 1 1 280px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .feature h3 { color: #005f99; margin-top: 0; }
-        .cta { background: #005f99; color: #fff; text-align: center; padding: 40px; border-radius: 8px; margin-top: 40px; }
-        .cta a { display: inline-block; margin-top: 20px; background: #00aaff; color: #fff; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: 600; }
-        .cta a:hover { background: #0088cc; }
-        footer { background: #003f66; color: #fff; text-align: center; padding: 20px; font-size: 0.9em; }
-        @media (max-width: 600px) {
-            header h1 { font-size: 2em; }
-            .features { flex-direction: column; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Expat Team</title>
+  <meta name="description" content="The Expat Team helps expats and international students in Germany navigate finance, insurance and everyday life with confidence.">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#014D44;
+      --primary-dark:#003F3B;
+      --secondary:#76A49E;
+      --light:#F4EAD0;
+      --background:#FBF9F4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--primary-dark);
+    }
+    header {
+      background: var(--primary-dark);
+      color: var(--light);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img.logo {
+      width: 80px;
+      height:auto;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-family: 'Lexend', sans-serif;
+      font-weight:700;
+      margin:0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top:10px;
+    }
+    nav {
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      gap:30px;
+      padding: 10px 20px;
+      position: sticky;
+      top:0;
+      z-index:10;
+    }
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight:600;
+      font-size: 1rem;
+      font-family: 'Lexend', sans-serif;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      font-family: 'Lexend', sans-serif;
+      font-size:2rem;
+      margin-bottom:20px;
+      color: var(--primary-dark);
+    }
+    .features {
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+    .feature {
+      flex:1 1 250px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .feature h3 {
+      margin-top:0;
+      color: var(--primary);
+      font-family:'Lexend', sans-serif;
+      font-size:1.3rem;
+    }
+    .feature p {
+      margin-bottom:0;
+      line-height:1.5;
+    }
+    .cta {
+      background: var(--secondary);
+      color: var(--primary-dark);
+      padding: 40px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .cta h3 {
+      margin-top:0;
+      font-family:'Lexend', sans-serif;
+      font-size:1.8rem;
+    }
+    .cta a.btn {
+      display:inline-block;
+      margin-top:20px;
+      background: var(--primary-dark);
+      color: var(--light);
+      padding: 12px 24px;
+      border-radius:4px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .cta a.btn:hover {
+      background: var(--primary);
+    }
+    .resources a {
+      color: var(--primary-dark);
+      font-weight:600;
+      text-decoration:none;
+    }
+    .resources a:hover {
+      text-decoration:underline;
+    }
+    footer {
+      background: var(--primary-dark);
+      color: var(--light);
+      text-align:center;
+      padding:20px;
+      font-size:0.9rem;
+    }
+    @media (max-width:700px) {
+      header h1 {
+        font-size:2rem;
+      }
+      nav {
+        flex-wrap:wrap;
+        gap:15px;
+      }
+      .feature {
+        flex:1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>The Expat Team</h1>
-        <p>Empowering expats and international students in Germany</p>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <header>
+    <img src="TET-Logo.png" alt="The Expat Team logo" class="logo">
+    <h1>The Expat Team</h1>
+    <p>Empowering expats and international students in Germany</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
     <section id="about">
-        <h2>About Us</h2>
-        <p>Living in a new country is exciting—but understanding Germany’s financial, insurance and bureaucratic systems can feel daunting. The Expat Team is here to guide you every step of the way. We help expats and international students open bank accounts, choose the right health, liability and life insurance, build credit, plan for retirement and invest wisely. Our mission is to simplify German finance so you can focus on building a life you love.</p>
+      <h2>About Us</h2>
+      <p>Relocating to a new country is an exciting adventure—yet understanding Germany’s financial, insurance and bureaucratic systems can feel daunting. The Expat Team is here to guide you every step of the way. We help expats and international students open bank accounts, choose the right health, liability and life insurance, build credit, plan for retirement and invest wisely. Our mission is to simplify German finance so you can focus on building a life you love.</p>
     </section>
     <section id="services">
-        <h2>Our Services</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>Essential Insurance</h3>
-                <p>Get tailored advice on health, liability and life insurance that meets German requirements and fits your lifestyle.</p>
-            </div>
-            <div class="feature">
-                <h3>Banking & Credit</h3>
-                <p>We guide you through opening bank accounts, setting up digital payment methods and building credit for future goals.</p>
-            </div>
-            <div class="feature">
-                <h3>Wealth & Retirement</h3>
-                <p>Plan for long‑term security with personalised strategies for saving, investing and old‑age provision in Germany.</p>
-            </div>
-            <div class="feature">
-                <h3>Family & Lifestyle</h3>
-                <p>Advice on home contents, family finances and loans—so you can protect what matters most while enjoying life here.</p>
-            </div>
+      <h2>Our Services</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Essential Insurance</h3>
+          <p>Get tailored advice on health, liability and life insurance that meets German requirements and fits your lifestyle.</p>
         </div>
-        <div class="cta">
-            <h3>Ready to take control of your finances?</h3>
-            <p>Join our community and get the free Expat Guide packed with checklists and tips.</p>
-            <a href="https://www.linkedin.com/company/106774692/" target="_blank">Connect on LinkedIn</a>
+        <div class="feature">
+          <h3>Banking & Credit</h3>
+          <p>We guide you through opening bank accounts, setting up digital payment methods and building credit for future goals.</p>
         </div>
+        <div class="feature">
+          <h3>Wealth & Retirement</h3>
+          <p>Plan for long‑term security with personalised strategies for saving, investing and old‑age provision in Germany.</p>
+        </div>
+        <div class="feature">
+          <h3>Family & Lifestyle</h3>
+          <p>Advice on home contents, family finances and loans—so you can protect what matters most while enjoying life here.</p>
+        </div>
+      </div>
     </section>
-    <section id="resources">
-        <h2>Resources</h2>
-        <p>We regularly publish articles, webinars and checklists covering topics like insurance, banking, cultural integration and more. Follow us on LinkedIn to stay up to date with our latest resources.</p>
+    <section id="resources" class="resources">
+      <h2>Resources</h2>
+      <p>We regularly publish articles, webinars and checklists covering topics like insurance, banking, cultural integration and more. Follow us on LinkedIn to stay up to date with our latest resources.</p>
+      <p><strong>Download our free guide:</strong> <a href="HORBACH_Expats_Guide_EN-TET.pdf" download>HORBACH Expats Guide (EN)</a></p>
     </section>
     <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>Have questions about life in Germany or want personalised advice? We'd love to hear from you.</p>
-        <p>Email: <a href="mailto:info@theexpatteam.com">info@theexpatteam.com</a></p>
+      <h2>Get in Touch</h2>
+      <p>Have questions about life in Germany or want personalised advice? We'd love to hear from you.</p>
+      <p>Email: <a href="mailto:info@theexpatteam.com">info@theexpatteam.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/company/106774692/" target="_blank">The Expat Team</a></p>
     </section>
-    <footer>
-        <p>&copy; 2025 The Expat Team. All rights reserved.</p>
-    </footer>
+    <section class="cta">
+      <h3>Ready to take control of your finances?</h3>
+      <p>Join our community and get the free Expat Guide packed with checklists and tips.</p>
+      <a class="btn" href="HORBACH_Expats_Guide_EN-TET.pdf" download>Download Guide</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 The Expat Team. All rights reserved.</p>
+  </footer>
 </body>
 </html>
